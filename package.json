@@ -1,20 +1,31 @@
 {
-   {
-   "name": "Mateo clone api",
+  "name": "alurageek-api",
   "version": "1.0.0",
   "description": "Products for Alura Geek fake store api",
   "main": "api/server.js",
-}
   "scripts": {
     "start": "node api/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MateoLoz/Julieta-Api.git"
+    "url": "https://github.com/MateoLoz/Fake-api.git"
   },
+  "keywords": [
+    "alura",
+    "alurageek",
+    "json-server",
+    "javascript",
+    "API"
+  ],
+  "author": "Mateo Lozano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SofiDevO/alurageek-API/issues"
+  },
+  "homepage": "https://github.com/SofiDevO/alurageek-API#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "json-server": "^1.0.0-beta.1",
     "json-server": "^0.17.3"
-  },
+  }
 }
+
