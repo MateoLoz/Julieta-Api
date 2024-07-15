@@ -1,15 +1,18 @@
 const jsonServer = require('json-server')
-
-const fs = require('fs')
-const db = JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json')))
-const router = jsonServer.router(db)
 const server = jsonServer.create()
+const router = jsonServer.router('users.json')
 const middlewares = jsonServer.defaults()
-const port = process.env.PORT || 3000
-server.use(middlewares)
-// Add this before server.use(router)
 
+server.use(middlewares)
+
+server.use(jsonServer.rewriter({
+    '/api/*': '/$1',
+    'users/:resource/:id/show': '/:resource/:id'
+}))
 server.use(router)
-server.listen(port)
+server.listen(3000, () => {
+    console.log('JSON Server is running')
+})
+
 // Export the Server API
 module.exports = server
