@@ -25,8 +25,8 @@
   "homepage": "https://github.com/SofiDevO/alurageek-API#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "json-server": "^0.17.3",
-    "fs": "^0.0.1-security"
+    "json-server": "^0.17.3"
+    
   }
 }
 
